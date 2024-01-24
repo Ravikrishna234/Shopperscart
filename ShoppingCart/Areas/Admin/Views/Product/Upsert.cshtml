@@ -1,0 +1,104 @@
+﻿    @model ProductVM
+
+@if (Model.Product.Id != 0){
+    <h1 class="text-center">Update Product</h1>
+}else {
+    <h1 class="text-center">Create Product</h1>
+}
+<div class="card shadow border-0 my-4">
+    <div class="card-body p-4">
+        <form method="post" enctype="multipart/form-data">
+            <input asp-for="@Model.Product.Id" hidden/>
+            <input asp-for="@Model.Product.ImageUrl" hidden />
+            <div class="row">
+                <div class="col-10">
+                    <div class="border p-3 mt-2">
+                        <div class="row pb-2">
+                            @* <h2 class="text-primary">Create Category</h2> *@
+                            @* <hr/> *@
+                        </div>
+                        <div asp-validation-summary="All"></div>
+                        <div class="mb-3 row p-1">
+                            <label asp-for="@Model.Product.Title" class="p-0"></label> @*It will defaultly assigned the attribute name with key*@
+                            <input asp-for="@Model.Product.Title" type="text" class="form-control" />  @*No need to specify type it will automatically get the type*@
+                            <span asp-validation-for="@Model.Product.Title" class="text-warning"></span>
+                        </div>
+                        <div class="mb-3 row p-1">
+                            <label asp-for="Product.Description" class="p-0"></label>@*Created a Data Annotation DisplayName for user-defined naming convention*@
+                            <textarea asp-for="Product.Description" type="text" class="form-control"></textarea>
+                            <span asp-validation-for="Product.Description" class="text-warning"></span>
+                        </div>
+                        <div class="mb-3 row p-1">
+                            <label asp-for="Product.ISBN" class="p-0"></label>@*Created a Data Annotation DisplayName for user-defined naming convention*@
+                            <input asp-for="Product.ISBN" type="text" class="form-control" />
+                            <span asp-validation-for="Product.ISBN" class="text-warning"></span>
+                        </div>
+                        <div class="mb-3 row p-1">
+                            <label asp-for="Product.Author" class="p-0"></label>@*Created a Data Annotation DisplayName for user-defined naming convention*@
+                            <input asp-for="Product.Author" type="text" class="form-control" />
+                            <span asp-validation-for="Product.Author" class="text-warning"></span>
+                        </div>
+                        <div class="mb-3 row p-1">
+                            <label asp-for="Product.ListPrice" class="p-0"></label>@*Created a Data Annotation DisplayName for user-defined naming convention*@
+                            <input asp-for="Product.ListPrice" type="text" class="form-control" />
+                            <span asp-validation-for="Product.ListPrice" class="text-warning"></span>
+                        </div>
+                        <div class="mb-3 row p-1">
+                            <label asp-for="Product.Price" class="p-0"></label>@*Created a Data Annotation DisplayName for user-defined naming convention*@
+                            <input asp-for="Product.Price" type="text" class="form-control" />
+                            <span asp-validation-for="Product.Price" class="text-warning"></span>
+                        </div>
+                        <div class="mb-3 row p-1">
+                            <label asp-for="Product.Price50" class="p-0"></label>@*Created a Data Annotation DisplayName for user-defined naming convention*@
+                            <input asp-for="Product.Price50" type="text" class="form-control" />
+                            <span asp-validation-for="Product.Price50" class="text-warning"></span>
+                        </div>
+                        <div class="mb-3 row p-1">
+                            <label asp-for="Product.Price100" class="p-0"></label>@*Created a Data Annotation DisplayName for user-defined naming convention*@
+                            <input asp-for="Product.Price100" type="text" class="form-control" />
+                            <span asp-validation-for="Product.Price100" class="text-warning"></span>
+                        </div>
+                        <div class="mb-3 row p-1">
+                            <label asp-for="Product.CategoryId" class="p-0"></label>
+                            @* <select asp-for="CategoryId" asp-items="ViewBag.CategoryList" class="form-select"> *@
+                            <select asp-for="Product.CategoryId" asp-items="@Model.CategoryList" class="form-select">
+                                <option disabled selected>--Select Category--</option>
+                            </select>
+                            <span asp-validation-for="Product.CategoryId" class="text-warning"></span>
+                        </div>
+                        <div class="mb-3 row p-1">
+                            <label asp-for="@Model.Product.ImageUrl" class="p-0"></label>
+                            <input type="file" name="file" type="text" class="form-control" accept=".jpg,.jpeg,.png" />
+                            @* <span asp-validation-for="@Model.Product.ImageUrl" class="text-warning"></span> *@
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-md-3">
+                                @if (Model.Product.Id != 0)
+                                {
+                                    <button type="submit" class="btn btn-primary form-control">Update</button>
+                                }
+                                else
+                                {
+                                    <button type="submit" class="btn btn-primary form-control">Create</button>
+
+                                }
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <a asp-controller="Product" asp-action="Index" class="btn btn-secondary border border-primary form-control">Back to List</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <img src="@Model.Product.ImageUrl" width="100%" style="border-radius:5px border:1px solid #bbb9b9" alt="Image"/>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

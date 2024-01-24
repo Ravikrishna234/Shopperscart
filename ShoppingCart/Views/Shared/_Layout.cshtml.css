@@ -7,10 +7,13 @@ a.navbar-brand {
   word-break: break-all;
 }
 
-a {
+/*a {
   color: #0077cc;
 }
-
+*/
+body {
+    margin-bottom:20px;
+}
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
@@ -40,7 +43,8 @@ button.accept-policy {
 }
 
 .footer {
-  position: absolute;
+  position:fixed;
+  margin-top:20px;
   bottom: 0;
   width: 100%;
   white-space: nowrap;

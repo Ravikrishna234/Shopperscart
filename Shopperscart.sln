@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCart", "ShoppingCart\ShoppingCart.csproj", "{3DC32DE5-E8C3-4639-BAD2-82E3BF4528BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingCart", "ShoppingCart\ShoppingCart.csproj", "{3DC32DE5-E8C3-4639-BAD2-82E3BF4528BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoppingcart.DatabAccess", "Shoppingcart.DatabAccess\Shoppingcart.DatabAccess.csproj", "{A18E8AA7-BE20-46F6-8BB2-9D304E8DD26A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoppingcart.Models", "Shoppingcart.Models\Shoppingcart.Models.csproj", "{81B3F45C-CC83-4871-8AA2-559797F676CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoppingcart.Utility", "Shoppingcart.Utility\Shoppingcart.Utility.csproj", "{C3A5FFA7-65C8-4ED2-8588-D07470AE9119}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{3DC32DE5-E8C3-4639-BAD2-82E3BF4528BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DC32DE5-E8C3-4639-BAD2-82E3BF4528BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DC32DE5-E8C3-4639-BAD2-82E3BF4528BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A18E8AA7-BE20-46F6-8BB2-9D304E8DD26A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A18E8AA7-BE20-46F6-8BB2-9D304E8DD26A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A18E8AA7-BE20-46F6-8BB2-9D304E8DD26A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A18E8AA7-BE20-46F6-8BB2-9D304E8DD26A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81B3F45C-CC83-4871-8AA2-559797F676CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81B3F45C-CC83-4871-8AA2-559797F676CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81B3F45C-CC83-4871-8AA2-559797F676CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81B3F45C-CC83-4871-8AA2-559797F676CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3A5FFA7-65C8-4ED2-8588-D07470AE9119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3A5FFA7-65C8-4ED2-8588-D07470AE9119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3A5FFA7-65C8-4ED2-8588-D07470AE9119}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3A5FFA7-65C8-4ED2-8588-D07470AE9119}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,36 @@
+﻿@model Category
+<h1>Create Category</h1>
+
+<form method="post">
+    @* <input asp-for="Id" hidden /> *@
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Edit Category</h2>
+            <hr />
+        </div>
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Name" class="p-0"></label> @*It will defaultly assigned the attribute name with key*@
+            <input asp-for="Name" type="text" class="form-control" />  @*No need to specify type it will automatically get the type*@
+            <span asp-validation-for="Name" class="text-warning"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="DisplayOrder" class="p-0"></label>@*Created a Data Annotation DisplayName for user-defined naming convention*@
+            <input asp-for="DisplayOrder" type="text" class="form-control" />
+            <span asp-validation-for="DisplayOrder" class="text-warning"></span>
+        </div>
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-primary form-control">Update</button>
+            </div>
+            <div class="col-6 col-md-3">
+                <a asp-controller="Category" asp-action="Index" class="btn btn-secondary border border-primary form-control">Back to List</a>
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
